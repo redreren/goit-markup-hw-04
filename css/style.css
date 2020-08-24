@@ -124,6 +124,8 @@ img {
 
 .hero {
   background-color: var(--footer-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .subtitle {
