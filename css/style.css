@@ -63,8 +63,6 @@ img {
 .header {
   background-color: var(--primary-background-color);
   border: 1px solid #ececec;
-  /* padding-top: 24px;
-  padding-bottom: 25px; */
 }
 
 .header .link:focus,
@@ -134,8 +132,10 @@ img {
 
 .hero {
   background-color: var(--footer-background-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -277,6 +277,28 @@ img {
   margin-right: 30px;
 }
 
+.about-list-item {
+  position: relative;
+}
+
+.about-text {
+  position: absolute;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  bottom: 0;
+
+  font-weight: 700;
+  font-size: var(--text-font-size);
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--title-color-dark-theme);
+  background: rgba(47, 48, 58, 0.8);
+}
+
 /*TEAM*/
 
 .team {
@@ -348,7 +370,7 @@ img {
 
 .socials-icon {
   /* box-sizing: content-box; */
-  fill: #AFB1B8;
+  fill: #afb1b8;
 }
 
 .socials-link:hover .socials-icon,
@@ -371,7 +393,7 @@ img {
 .client-list-item {
   display: flex;
   flex-wrap: wrap;
-  width: calc((100% - 30px *5)/6);
+  width: calc((100% - 30px * 5) / 6);
   margin-right: 30px;
 }
 
@@ -385,13 +407,13 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  border: 1px solid #AFB1B8;
+  border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
 }
 
 .client-item-list-link-icon {
-  fill: #AFB1B8;
+  fill: #afb1b8;
 }
 
 .client-item-list-link:hover,
@@ -470,6 +492,49 @@ img {
 
 .portfolio-list-item-image {
   margin-bottom: 20px;
+}
+
+.portfolio-list-item:hover .overlay::before,
+.portfolio-list-item:focus .overlay::before {
+  opacity: 1;
+}
+
+.portfolio-list-item:hover .overlay-text,
+.portfolio-list-item:focus .overlay-text {
+  opacity: 1;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay::before {
+  display: inline-block;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+.overlay-text {
+  position: absolute;
+  width: 322px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  font-weight: normal;
+  font-size: var(--description-font-size);
+  line-height: 1.555;
+  color: var(--title-color-dark-theme);
 }
 
 .content {
